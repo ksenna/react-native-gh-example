@@ -1,7 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 export default class HomeScreen extends React.Component {
+  static navigationOptions = {
+    title: 'Home'
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -13,6 +17,15 @@ export default class HomeScreen extends React.Component {
           <Text style={styles.sectionText}>
             Click a button to view more data
           </Text>
+
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => this.props.navigation.navigate('UserProfile')}
+          >
+            <Text style={styles.buttonText}>
+              User Profile
+            </Text>
+          </TouchableOpacity>
         </View>
       </View>
     );
@@ -23,6 +36,21 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'white',
+  },
+  button: {
+    padding: 8,
+    borderRadius: 5,
+    backgroundColor: '#e73536',
+    height: 45,
+    justifyContent: 'center',
+    marginHorizontal: 25,
+    marginVertical: 10
+  },
+
+  buttonText: {
+    color: 'white',
+    fontWeight: 'bold',
+    textAlign: 'center',
   },
 
   section: {
