@@ -10,6 +10,10 @@ export default class UserProfile extends React.Component {
     }
   }
 
+  static navigationOptions = {
+    title: 'User Profile'
+  }
+
   componentDidMount() {
     return fetch('https://api.github.com/users/<username>')
       .then((response) => response.json())
