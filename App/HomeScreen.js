@@ -2,6 +2,10 @@ import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 export default class HomeScreen extends React.Component {
+  static navigationOptions = {
+    title: 'Home'
+  }
+
   render() {
     return (
       <View style={styles.container}>
