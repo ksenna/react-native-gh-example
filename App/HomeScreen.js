@@ -39,7 +39,7 @@ export default class HomeScreen extends React.Component {
 
           <TouchableOpacity
             style={styles.button}
-            onPress={() => this.props.navigation.navigate('UserProfile')}
+            onPress={() => this.props.navigation.navigate('UserProfile', { username: this.state.username })}
           >
             <Text style={styles.buttonText}>
               User Profile
