@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 export default class HomeScreen extends React.Component {
   constructor(props) {
@@ -24,6 +24,11 @@ export default class HomeScreen extends React.Component {
           <Text style={styles.sectionText}>
             Click a button to view more data
           </Text>
+
+          <TextInput
+            style={styles.textInput}
+            placeholder="Enter a username"
+          />
 
           <TouchableOpacity
             style={styles.button}
@@ -58,6 +63,14 @@ const styles = StyleSheet.create({
     color: 'white',
     fontWeight: 'bold',
     textAlign: 'center',
+  },
+
+  textInput: {
+    borderColor: 'gray',
+    borderWidth: 1,
+    padding: 10,
+    marginHorizontal: 25,
+    marginVertical: 10
   },
 
   section: {
