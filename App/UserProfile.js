@@ -15,7 +15,8 @@ export default class UserProfile extends React.Component {
   }
 
   componentDidMount() {
-    return fetch('https://api.github.com/users/<username>')
+    const { username } = this.props.navigation.state.params
+    return fetch(`https://api.github.com/users/${username}`)
       .then((response) => response.json())
       .then((responseJson) => {
         this.setState({
