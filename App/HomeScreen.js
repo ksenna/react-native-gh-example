@@ -13,6 +13,12 @@ export default class HomeScreen extends React.Component {
     title: 'Home'
   }
 
+  _updateUsername(username) {
+    this.setState({
+      username: username,
+    });
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -28,6 +34,7 @@ export default class HomeScreen extends React.Component {
           <TextInput
             style={styles.textInput}
             placeholder="Enter a username"
+            onChangeText={ (text) => this._updateUsername(text) }
           />
 
           <TouchableOpacity
