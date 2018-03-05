@@ -2,6 +2,13 @@ import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 export default class HomeScreen extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: '',
+    };
+  }
+
   static navigationOptions = {
     title: 'Home'
   }
