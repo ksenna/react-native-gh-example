@@ -28,7 +28,7 @@ export default class HomeScreen extends React.Component {
           </Text>
 
           <Text style={styles.sectionText}>
-            Click a button to view more data
+            Enter a username and click the button to see more data
           </Text>
 
           <TextInput
@@ -42,7 +42,7 @@ export default class HomeScreen extends React.Component {
             onPress={() => this.props.navigation.navigate('UserProfile', { username: this.state.username })}
           >
             <Text style={styles.buttonText}>
-              User Profile
+              View User Profile
             </Text>
           </TouchableOpacity>
         </View>
